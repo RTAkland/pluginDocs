@@ -227,33 +227,3 @@ server {
 ```
 
 </details>
-
-# 开发
-
-建议使用[Intellij IDEA](https://www.jetbrains.com/idea/)进行开发, 本项目使用纯[Kotlin](https://kotl.in)进行开发,
-不接受Java的PR
-
-* 1.Clone仓库
-
-```shell
-$ git clone https://github.com/RTAkland/ChatConnecter.git
-```
-
-* 2.等待IDEA索引完成
-* 3.阅读源代码并遵循Apache-2.0协议进行开发和开源
-
-# 开源
-
-- 本项目以[Apache-2.0](./LICENSE)许可开源, 即:
-    - 你可以直接使用该项目提供的功能, 无需任何授权
-    - 你可以在**注明来源版权信息**的情况下对源代码进行任意分发和修改以及衍生
-
-# 鸣谢
-
-<div>
-
-<img src="https://static.rtast.cn/static/other/jetbrains.png" alt="JetBrainsIcon" width="128">
-
-<a href="https://www.jetbrains.com/opensource/"><code>JetBrains Open Source</code></a> 提供的强大IDE支持
-
-</div>
