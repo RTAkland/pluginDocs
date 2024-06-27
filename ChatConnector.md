@@ -120,9 +120,9 @@ Kook中暂时只支持纯文本消息的转发
 
 ```json
 {
-  "wsAddress": "ws://127.0.0.1:8081",
+  "secretKey": "<your secret key here>",
+  "wsAddress": "ws://127.0.0.1:8081/ws",
   "httpAddress": "http://127.0.0.1:8083",
-  // 不要在最后加上 "/"
   "accessToken": "114514",
   "messageHandler": "OneBot",
   "groupId": 114514,
@@ -163,6 +163,14 @@ Kook中暂时只支持纯文本消息的转发
   "proxy": {
     "host": "localhost",
     "port": 7890
+  },
+  "commands": {
+    "execPermission": 2,
+    "whitelistPermission": 2,
+    "shortWhitelistPermission": 1,
+    "listPermission": 1,
+    "statusPermission": 1,
+    "enableShortWhitelistCommand": false
   }
 }
 ```
