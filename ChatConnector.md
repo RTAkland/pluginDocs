@@ -93,7 +93,7 @@
 
 ## Kook消息处理器
 
-Kook中暂时只支持纯文本消息的转发
+Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 > 如何才能找到你的聊天频道的ID呢? 答: 下面这张图箭头指向的就是你的频道ID位于最后一个斜杠后, 双击复制即可
 ![channel_id](https://static.rtast.cn/images/kook_channel.png)
@@ -106,6 +106,8 @@ Kook中暂时只支持纯文本消息的转发
 > 消息处理器
 
 ## Discord消息处理器
+
+Discord 中只支持纯文本以及部分emoji表情解析
 
 由于某种原因使用Discord消息处理器需要使用代理才能正常使用(如果你在国内)
 
