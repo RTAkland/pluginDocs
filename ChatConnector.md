@@ -39,20 +39,20 @@
 |:---------------:|:-----:|:-----:|
 |       纯文本       |   ✅   |   ✅   |
 |      通用CQ码      |   ✅   |       |
-|       图片        |      |   ✅   | 
-|       语音        |      |   ✅   |  
-|       艾特        |      |   ✅   |
-|      消息连转发      |      |   ✅   |
-|       位置        |      |   ✅   |
-|       收藏        |      |   ✅   |
-|      好友推荐       |      |   ✅   |
-|      群聊推荐       |      |   ✅   |
-|       文档        |      |   ✅   |
-|      音乐分享       |      |   ✅   |
-|      班级作业       |      |   ✅   |
-|   视频分享(哔哩哔哩)    |      |   ✅   |
-|       骰子        |      |   ✅   |
-|      石头剪刀布      |      |   ✅   |
+|       图片        |       |   ✅   | 
+|       语音        |       |   ✅   |  
+|       艾特        |       |   ✅   |
+|      消息连转发      |       |   ✅   |
+|       位置        |       |   ✅   |
+|       收藏        |       |   ✅   |
+|      好友推荐       |       |   ✅   |
+|      群聊推荐       |       |   ✅   |
+|       文档        |       |   ✅   |
+|      音乐分享       |       |   ✅   |
+|      班级作业       |       |   ✅   |
+|   视频分享(哔哩哔哩)    |       |   ✅   |
+|       骰子        |       |   ✅   |
+|      石头剪刀布      |       |   ✅   |
 |    群公告(不含图片)    |       |   ✅   |
 | MiniMessage语法消息 |       |   ✅   |
 
@@ -175,28 +175,29 @@ Kook中暂时只支持纯文本消息的转发
   }
 }
 ```
+
 </details>
 
 > 其中secretKey是你购买的时候我发方法给你的密钥, 请不要将密钥共享给他人, 因为你共享给别人用你自己就会被挤下线  
-> wsAddress是Lagrange的ws服务器地址, httpAddress是Lagrange的Http服务器地址  
+> wsAddress是Lagrange的ws服务器地址, httpAddress是Lagrange的Http服务器地址
 
 > accessToken是访问密钥, 在Lagrange中可以设置, 你必须将Ws和http的accessToken设置为相同的值
 > 如果你使用了Kook或者Discord你需要注册一个App, Kook注册应用可以点[这里](https://developer.kookapp.cn/app/index)
-> 快速注册  
+> 快速注册
 
 > messageHandler是消息处理器类型目前支持 `OneBot(QQ机器人)` `Kook(开黑啦)` `Discord`, 可选的值分别是
-> `OneBot` `Discord` `Kook` 请务必注意大小写  
+> `OneBot` `Discord` `Kook` 请务必注意大小写
 
-> groupId是需要监听消息的QQ群号, 如果你用的是Kook或者Discord你需要将其设置为文字频道的频道号  
+> groupId是需要监听消息的QQ群号, 如果你用的是Kook或者Discord你需要将其设置为文字频道的频道号
 
 > events是监听的事件类型, 这里是`Event`类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent`
 > PlayerJoinEvent表示玩家加入的事件如果添加了这一行则表示玩家加入服务器则会向qq群发送消息
 > PlayerLeaveEvent表示玩家离开服务器的事件,PlayerChatEvent表示玩家聊天事件(这个聊天事件指的是MC里的聊天事件),
-> InitEvent表示是否在插件初始化完成后在群内发送`初始化成功xxxxx`字样的信息  
+> InitEvent表示是否在插件初始化完成后在群内发送`初始化成功xxxxx`字样的信息
 
-> permission表示对应QQ号拥有的级别  
+> permission表示对应QQ号拥有的级别
 
-> rcons表示后端服务器的RCON地址, 如果你需要执行除`!!status` `!!list`以外的命令则需要配置rcon  
+> rcons表示后端服务器的RCON地址, 如果你需要执行除`!!status` `!!list`以外的命令则需要配置rcon
 
 > commands表示每个命令所需要的权限的ID, `Owner=3` `Admin=2` `Other=1(所有人都可以执行)`
 > commands.enableShortWhitelistCommand则表示是否开启简短的白名单添加方式, 格式为 `ID:xxx`
@@ -259,11 +260,11 @@ server {
 
 </details>
 
-
 # 许可协议
- 
+
 本项目使用GLA协议, 即:
- - 明确禁止反编译、分发等行为。
- - 声明软件的知识产权归我所有。
- - 免责声明，软件按现状提供。
- - 这是双方之间的完整协议。
+
+- 明确禁止反编译、分发等行为。
+- 声明软件的知识产权归我所有。
+- 免责声明，软件按现状提供。
+- 这是双方之间的完整协议。
