@@ -18,6 +18,10 @@
 > 如果你需要其他Mod加载器或其他平台的插件请通过[邮件](mailto:rtakland@outlook.com)
 > 联系我并进行购买，我会尽可能快的回复您的消息。
 
+# 展示
+![showcase](../images/chatc-chat-show.png)
+![showcase](../images/chatc-qq-chat-show.png)
+
 ![bStats](https://bstats.org/signatures/velocity/ChatConnector.svg)
 
 # 使用
