@@ -124,6 +124,7 @@ Discord 中只支持纯文本以及部分emoji表情解析
 ```json
 {
   "secretKey": "<your secret key here>",
+  "lang": "zh_cn",
   "wsAddress": "ws://127.0.0.1:8081/ws",
   "httpAddress": "http://127.0.0.1:8083",
   "accessToken": "114514",
@@ -172,8 +173,7 @@ Discord 中只支持纯文本以及部分emoji表情解析
     "whitelistPermission": 2,
     "shortWhitelistPermission": 1,
     "listPermission": 1,
-    "statusPermission": 1,
-    "enableShortWhitelistCommand": false
+    "statusPermission": 1
   }
 }
 ```
@@ -182,6 +182,8 @@ Discord 中只支持纯文本以及部分emoji表情解析
 
 > 其中secretKey是你购买的时候我发方法给你的密钥, 请不要将密钥共享给他人, 因为你共享给别人用你自己就会被挤下线  
 > wsAddress是Lagrange的ws服务器地址, httpAddress是Lagrange的Http服务器地址
+
+> lang是多语言, 可选的选项有`zh_cn` `en_us` 目前仅支持这些语言
 
 > accessToken是访问密钥, 在Lagrange中可以设置, 你必须将Ws和http的accessToken设置为相同的值
 > 如果你使用了Kook或者Discord你需要注册一个App, Kook注册应用可以点[这里](https://developer.kookapp.cn/app/index)
