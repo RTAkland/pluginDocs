@@ -208,7 +208,6 @@ Discord 中只支持纯文本以及部分emoji表情解析
 > rcons表示后端服务器的RCON地址, 如果你需要执行除`!!status` `!!list`以外的命令则需要配置rcon
 
 > commands表示每个命令所需要的权限的ID, `Owner=3` `Admin=2` `Other=1(所有人都可以执行)`
-> commands.enableShortWhitelistCommand则表示是否开启简短的白名单添加方式, 格式为 `ID:xxx`
 
 # 命令
 
