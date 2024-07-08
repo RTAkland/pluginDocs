@@ -15,12 +15,14 @@
 这个插件可以互通QQ/Kook/Discord和MC的消息, 包括不限于纯文本、同步子服之间的消息(跨服聊天)、远程执行命令
 快速添加白名单(格式: `ID:xxx`), 解析CQ码并转换成游戏内支持的文本格式(可以点击消息、悬浮文本预览内容)
 
-> 如果你需要其他Mod加载器或其他平台的插件请通过[邮件](mailto:rtakland@outlook.com)
-> 联系我并进行购买，我会尽可能快的回复您的消息。
+!> 如果你需要其他Mod加载器或其他平台的插件请通过[邮件](mailto:buy@rtast.cn)联系我并进行购买，我会尽可能快的回复您的消息。
 
 # 展示
-![showcase](../images/chatc-chat-show.png)
-![showcase](../images/chatc-qq-chat-show.png)
+
+<div style="display: flex;">
+    <img src="../images/chatc-chat-show.png" alt="Image 1" style="width: 50%; height: auto;">
+    <img src="../images/chatc-qq-chat-show.png" alt="Image 2" style="width: 50%; height: auto;">
+</div>
 
 ![bStats](https://bstats.org/signatures/velocity/ChatConnector.svg)
 
@@ -111,9 +113,9 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 ## Discord消息处理器
 
-Discord 中只支持纯文本以及部分emoji表情解析
+!> Discord 中只支持纯文本以及部分emoji表情解析
 
-由于某种原因使用Discord消息处理器需要使用代理才能正常使用(如果你在国内)
+!> 由于某种原因使用Discord消息处理器需要使用代理才能正常使用(如果你在国内)
 
 你需要将`messageHandler`修改成`Discord`然后accesstoken填你的Bot的Token再配置一个HTTP代理，
 最后将`groupId`修改成你的频道ID就可以了
@@ -220,9 +222,10 @@ Discord 中只支持纯文本以及部分emoji表情解析
 
 # 注
 
-> 如果你需要使用frp将ws服务器映射到公网请使用http协议并设置accesstoken
+!> 如果你需要使用frp将ws服务器映射到公网请使用http协议并设置accesstoken
 
-> 如果你想在一个端口上同时使用http和websocket并配置ssl可以参考以下nginx的配置文件
+!> 如果你想在一个端口上同时使用http和websocket并配置ssl可以参考以下nginx的配置文件
+
 <details>
 <summary>点击展开配置文件</summary>
 
@@ -278,6 +281,7 @@ server {
 
 > 下方是CLA协议文件原文
 
+```license
 Commercial License Agreement
 
 This Commercial License Agreement (the "Agreement") is entered into as of [Date] by and
@@ -334,5 +338,4 @@ Name: [RTAkland]
 
 Licensee:
 Name: [CLA]
-
-
+```
