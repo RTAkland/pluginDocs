@@ -200,7 +200,8 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > messageHandler是消息处理器类型目前支持 `OneBot(QQ机器人)` `Kook(开黑啦)` `Discord`, 可选的值分别是
 > `OneBot` `Discord` `Kook` 请务必注意大小写
 
-> groupId是需要监听消息的QQ群号, 如果你用的是Kook或者Discord你需要将其设置为文字频道的频道号
+> groupId是需要监听消息的QQ群号, 如果你用的是Kook或者Discord你需要将其设置为文字频道的频道号, 可以设置多个群号/频道号,
+> 只需要用数组的形式包裹住群号/频道号就行, 例如: `[114514,12346,231323112]`
 
 > events是监听的事件类型, 这里是`Event`类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent`
 > PlayerJoinEvent表示玩家加入的事件如果添加了这一行则表示玩家加入服务器则会向qq群发送消息
