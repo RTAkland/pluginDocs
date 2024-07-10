@@ -203,10 +203,11 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > groupId是需要监听消息的QQ群号, 如果你用的是Kook或者Discord你需要将其设置为文字频道的频道号, 可以设置多个群号/频道号,
 > 只需要用数组的形式包裹住群号/频道号就行, 例如: `[114514,12346,231323112]`
 
-> events是监听的事件类型, 这里是`Event`类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent`
+> events是监听的事件类型, 这里是`Event`类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent` `GroupMessageEvent`  
 > PlayerJoinEvent表示玩家加入的事件如果添加了这一行则表示玩家加入服务器则会向qq群发送消息
 > PlayerLeaveEvent表示玩家离开服务器的事件,PlayerChatEvent表示玩家聊天事件(这个聊天事件指的是MC里的聊天事件),
 > InitEvent表示是否在插件初始化完成后在群内发送`初始化成功xxxxx`字样的信息
+> GroupMessageEvent表示是否转发QQ群/Discord/Kook频道的消息到游戏内
 
 > permission表示对应QQ号拥有的级别
 
