@@ -127,7 +127,7 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 你需要将`messageHandler`修改成`Discord`然后accesstoken填你的Bot的Token再配置一个HTTP代理，
 最后将`groupId`修改成你的频道ID就可以了
 
-# 配置Velocity
+# 配置ChatConnector
 
 在`plugins/ChatConnector`文件夹内找到`config.json`默认配置文件如下:
 
