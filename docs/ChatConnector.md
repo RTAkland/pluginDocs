@@ -22,7 +22,7 @@
 # 多语言支持
 
 !> ChatConnector支持多语言，例如`简体中文` `繁体中文` `英语` `日语` 分别对应了`zh_cn` `zh_hant` `en_us` `ja_jp`
-你可以在游戏内或者QQ群/Kook/Discord频道内分别使用 `/chatc lang zh_cn` `!!lang zh_cn` 来切换语言
+你可以在游戏内或者QQ群/Kook/Discord频道内分别使用 `/chatc lang zh_cn`(游戏指令) `!!lang zh_cn`(群指令) 来切换语言
 
 # 展示
 
@@ -109,7 +109,7 @@
 Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 > 如何才能找到你的聊天频道的ID呢? 答: 下面这张图箭头指向的就是你的频道ID位于最后一个斜杠后, 双击复制即可
-![channel_id](https://static.rtast.cn/images/kook_channel.png)
+![channel_id](../images/chatc-kook-channel.png)
 
 打开`config.json`将复制下来的id填入`groupId`内
 
@@ -137,17 +137,20 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 ```json
 {
   "secretKey": "<your secret key here>",
-  "lang": "zh_cn",
+  "lang": "en_us",
   "wsAddress": "ws://127.0.0.1:8081/ws",
   "httpAddress": "http://127.0.0.1:8083",
   "accessToken": "114514",
   "messageHandler": "OneBot",
-  "groupId": 114514,
+  "groupId": [
+    114514
+  ],
   "events": [
     "InitEvent",
     "PlayerLeaveEvent",
     "PlayerJoinEvent",
-    "PlayerChatEvent"
+    "PlayerChatEvent",
+    "GroupMessageEvent"
   ],
   "permission": {
     "owner": 114514,
@@ -186,7 +189,8 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
     "whitelistPermission": 2,
     "shortWhitelistPermission": 1,
     "listPermission": 1,
-    "statusPermission": 1
+    "statusPermission": 1,
+    "langCommandPermission": 1
   }
 }
 ```
