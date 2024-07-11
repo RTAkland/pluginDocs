@@ -43,9 +43,9 @@
 
 > 因为使用的是OneBotV11规范所以理论上大部分OneBotV11实现都可以使用此插件
 
-## 配置OneBotV11实现
+### 配置OneBotV11实现
 
-### 已支持解析的消息类型
+#### 已支持解析的消息类型
 
 |      功能/平台      | MC向QQ | QQ向MC |
 |:---------------:|:-----:|:-----:|
@@ -68,7 +68,7 @@
 |    群公告(不含图片)    |       |   ✅   |
 | MiniMessage语法消息 |       |   ✅   |
 
-### 配置Lagrange.OneBot
+#### 配置Lagrange.OneBot
 
 你需要前往[Lagrange](https://github.com/LagrangeDev/Lagrange.Core/)仓库下载最新的Lagrange.OneBot, 并登录你的账号
 向`appsettings.json`文件中的`Implementations`设置为
@@ -94,7 +94,7 @@
 
 你可以按需填写`AccessToken`键, 然后记住你的配置文件中的内容, ***请确保两个AccessToken一致***
 
-### 注意事项
+#### 注意事项
 
 > 一个OneBotV11实现可以对应多个群例如有一个机器人, 两个群并且
 > 这两个群都加入了, 两个MC服务器则需要在Velocity配置文件中的
