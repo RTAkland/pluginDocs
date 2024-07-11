@@ -21,7 +21,8 @@
 
 # 多语言支持
 
-> ChatConnector支持多语言，例如`简体中文` `英语` `日语` 分别对应了`zh_cn` `en_us` `ja_jp`
+!> ChatConnector支持多语言，例如`简体中文` `繁体中文` `英语` `日语` 分别对应了`zh_cn` `zh_hant` `en_us` `ja_jp`
+你可以在游戏内或者QQ群/Kook/Discord频道内分别使用 `/chatc lang zh_cn` `!!lang zh_cn` 来切换语言
 
 # 展示
 
@@ -195,7 +196,7 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > 其中secretKey是你购买的时候我发方法给你的密钥, 请不要将密钥共享给他人, 因为你共享给别人用你自己就会被挤下线  
 > wsAddress是Lagrange的ws服务器地址, httpAddress是Lagrange的Http服务器地址
 
-> lang是多语言, 可选的选项有`zh_cn` `en_us` 目前仅支持这些语言
+> lang是多语言, 可用的值见 [多语言支持](#多语言支持)
 
 > accessToken是访问密钥, 在Lagrange中可以设置, 你必须将Ws和http的accessToken设置为相同的值
 > 如果你使用了Kook或者Discord你需要注册一个App, Kook注册应用可以点[这里](https://developer.kookapp.cn/app/index)
