@@ -236,7 +236,7 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > commands表示每个命令所需要的权限的ID, `Owner=3` `Admin=2` `Other=1(所有人都可以执行)`
 
 > style中的内容表示来自群聊或者跨服聊天字体的样式, 使用MiniMessage语法来定义,
-> 见: [MiniMessage](https://docs.advntr.dev/minimessage/format.htm)  
+> 见: [MiniMessage](https://docs.advntr.dev/minimessage/format.html)  
 > 默认都是 `<bold><italic><gray>` 表示 **加粗** _斜体_ <font color="gray">灰色</font>
 
 # 命令
