@@ -194,6 +194,10 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
     "listPermission": 1,
     "statusPermission": 1,
     "langCommandPermission": 1
+  },
+  "style": {
+    "crossServerMessageStyle": "<bold><italic><gray>",
+    "groupMessageStyle": "<bold><italic><gray>"
   }
 }
 ```
