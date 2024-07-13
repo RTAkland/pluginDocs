@@ -232,19 +232,20 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 使用`/chatc` 来获取所有的子命令
 
-> `/chatc reload` 重载配置文件  
+> `/chatc reload` 重载配置文件(需要在控制台执行)  
 > `/chatc reconnect` 重新连接Websocket服务器  
-> `/chatc disconnect` 断开Websocket的连接  
-> `/chatc reload ws` 重新连接Websocket(在更改了配置文件的情况下重连需要使用此命令)  
-> `/chatc lang <lang>` 来切换语言, 支持的语言列表见 [多语言支持](#多语言支持)  
+> `/chatc disconnect` 断开Websocket的连接(需要在控制台执行)  
+> `/chatc reload ws` 重新连接Websocket(在更改了配置文件的情况下重连需要使用此命令)(需要在控制台执行)  
+> `/chatc lang <lang>` 来切换语言, 支持的语言列表见 [多语言支持](#多语言支持)(需要在控制台执行)  
 > `/chatc check-update` 检查插件是否有新版本  
-> `/chatc help` 列出所有子命令
+> `/chatc help` 列出所有子命令(需要在控制台执行)
 
 # 注
 
 !> 如果你需要使用frp将ws服务器映射到公网请使用http协议并设置accesstoken
 
 !> 如果你想在一个端口上同时使用http和websocket并配置ssl可以参考以下nginx的配置文件
+!> 强烈建议将HTTP和Websocket配置TLS加密, 如果不加密你的任何数据(聊天信息敏感信息)就像在裸奔
 
 <details>
 <summary>点击展开配置文件</summary>
