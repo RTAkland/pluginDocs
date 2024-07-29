@@ -221,7 +221,7 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 > events是监听的事件类型, 这里是`Event`
 >
-类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent` `GroupMessageEvent` `CrossServerMessageEvent`  
+类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent` `GroupMessageEvent` `CrossServerMessageEvent`
 > `PlayerJoinEvent`表示玩家加入的事件如果添加了这一行则表示玩家加入服务器则会向qq群发送消息  
 > `PlayerLeaveEvent`表示玩家离开服务器的事件  
 > `PlayerChatEvent`表示玩家聊天事件(这个聊天事件指的是MC里的聊天事件)  
@@ -256,7 +256,10 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 !> 如果你需要使用frp将ws服务器映射到公网请使用http协议并设置accesstoken
 
 !> 如果你想在一个端口上同时使用http和websocket并配置ssl可以参考以下nginx的配置文件
+
 !> 强烈建议将HTTP和Websocket配置TLS加密, 如果不加密你的任何数据(聊天信息敏感信息)就像在裸奔
+
+!> 如果你使用了本插件并且控制台输出卡在`正在获取群信息...`那么说明你的机器人进入群的事件太短过几天再试试
 
 <details>
 <summary>点击展开配置文件</summary>
