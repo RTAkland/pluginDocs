@@ -16,9 +16,9 @@
 # 概述
 
 这个插件可以互通QQ/Kook/Discord和MC的消息, 包括不限于纯文本、同步子服之间的消息(跨服聊天)、远程执行命令
-快速添加白名单(格式: `ID:xxx`), 解析CQ码并转换成游戏内支持的文本格式(可以点击消息、悬浮文本预览内容)
+快速添加白名单, 解析CQ码并转换成游戏内支持的文本格式(可以点击消息、悬浮文本预览内容)
 
-!> 本插件支持多群组监听转发(包括Kook、Discord多频道)
+!> 本插件支持多群组监听转发
 
 !> 如果你需要其他Mod加载器或其他平台的插件请通过[邮件](mailto:buy@rtast.cn)联系我并进行购买，我会尽可能快的回复您的消息。
 
@@ -143,62 +143,68 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
   "lang": "en_us",
   "wsAddress": "ws://127.0.0.1:8081/ws",
   "httpAddress": "http://127.0.0.1:8083",
-  "accessToken": "114514",
+  "accessToken": "1145141919810",
   "messageHandler": "OneBot",
   "groupId": [
-    114514
+    114514,
+    1919810
   ],
   "events": [
     "InitEvent",
     "PlayerLeaveEvent",
     "PlayerJoinEvent",
     "PlayerChatEvent",
-    "GroupMessageEvent"
+    "GroupMessageEvent",
+    "CrossServerMessageEvent"
   ],
   "permission": {
-    "owner": 114514,
+    "owner": 3458671395,
     "admins": [
       114514,
       1919810
     ],
     "others": [
-      1111111,
-      1111
+      66666,
+      33343131
     ]
   },
   "rcons": {
     "enabled": false,
     "rcons": [
       {
-        "name": "test",
+        "name": "instance1",
         "host": "127.0.0.1",
         "port": 25577,
-        "password": null
+        "password": "123456"
       },
       {
-        "name": "test",
+        "name": "instance2",
         "host": "127.0.0.1",
         "port": 25599,
-        "password": null
+        "password": "1919810"
       }
     ]
   },
   "proxy": {
-    "host": "localhost",
+    "host": "127.0.0.1",
     "port": 7890
   },
   "commands": {
     "execPermission": 2,
     "whitelistPermission": 2,
-    "shortWhitelistPermission": 1,
     "listPermission": 1,
     "statusPermission": 1,
-    "langCommandPermission": 1
+    "langCommandPermission": 2
   },
   "style": {
-    "crossServerMessageStyle": "<bold><italic><gray>",
-    "groupMessageStyle": "<bold><italic><gray>"
-  }
+    "crossServerMessageStyle": "<italic><gray>",
+    "groupMessageStyle": "<italic><gray>"
+  },
+  "memesReply": true,
+  "commandPrefixes": [
+    "!!",
+    "！！"
+  ]
 }
 ```
 
@@ -237,7 +243,13 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 > style中的内容表示来自群聊或者跨服聊天字体的样式, 使用MiniMessage语法来定义,
 > 见: [MiniMessage](https://docs.advntr.dev/minimessage/format.html)  
-> 默认都是 `<bold><italic><gray>` 表示 **加粗** _斜体_ <font color="gray">灰色</font>
+> 默认都是 `<italic><gray>` 表示 _斜体_ <font color="gray">灰色</font>
+
+> memesReply表示是否开启梗回复, 比如 在群中发送114514会自动回复1919810, 
+> 这些梗的json文件可以从[这里](https://static.rtast.cn/chatc/memes.json)找到
+
+> commandPrefixes表示群中命令的前缀默认为半角(英文输入法)的感叹号和全角(中文输入法)的感叹号,
+> 如果列表中添加了`#`作为命令前缀那么可以使用 `#list`来执行所有命令
 
 # 命令
 
