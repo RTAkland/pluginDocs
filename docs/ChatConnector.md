@@ -190,11 +190,11 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
     "port": 7890
   },
   "commands": {
-    "execPermission": 2,
-    "whitelistPermission": 2,
-    "listPermission": 1,
-    "statusPermission": 1,
-    "langCommandPermission": 2
+    "execPermission": "ADMIN",
+    "whitelistPermission": "ADMIN",
+    "listPermission": "OTHER",
+    "statusPermission": "OTHER",
+    "langCommandPermission": "ADMIN"
   },
   "style": {
     "crossServerMessageStyle": "<italic><gray>",
@@ -239,7 +239,7 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 > rcons表示后端服务器的RCON地址, 配置了rcon可以执行一些需要跟游戏交互的指令例如`白名单操作`
 
-> commands表示每个命令所需要的权限的ID, `Owner=3` `Admin=2` `Other=1(所有人都可以执行)`
+> commands表示每个命令所需要的权限的ID, `Owner` `Admin` `Other(所有人都可以执行)`
 
 > style中的内容表示来自群聊或者跨服聊天字体的样式, 使用MiniMessage语法来定义,
 > 见: [MiniMessage](https://docs.advntr.dev/minimessage/format.html)  
