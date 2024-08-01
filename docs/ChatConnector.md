@@ -204,7 +204,15 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
   "commandPrefixes": [
     "!!",
     "！！"
-  ]
+  ],
+  "commandAliases": {
+    "wh": [
+      "whitelist"
+    ],
+    "check-update": [
+      "cu"
+    ]
+  }
 }
 ```
 
@@ -249,7 +257,11 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > 这些梗的json文件可以从[这里](https://static.rtast.cn/chatc/memes.json)找到
 
 > commandPrefixes表示群中命令的前缀默认为半角(英文输入法)的感叹号和全角(中文输入法)的感叹号,
-> 如果列表中添加了`#`作为命令前缀那么可以使用 `#list`来执行所有命令
+> 如果列表中添加了`#`作为命令前缀那么可以使用 `#list`来执行所有命令, 你也可以添加一行 `""`来取消掉
+> 命令前缀
+
+> commandAliases是命令别名, 键值是原本的命令, 所有原本的命令可以用 `!!help` 来显示出来, 支持添加
+> 多个别名, 支持中文, 但是更改之后无法使用 `/chatc reload` 来重新加载必须重新启动velocity才能应用
 
 # 命令
 
