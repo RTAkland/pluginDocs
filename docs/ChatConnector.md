@@ -105,6 +105,8 @@
 > Websocket的连接会在初始化插件的时候自动进行连接, 不需要手动连接
 > 当非正常关闭链接的时候会自动重连
 
+> 当然你也可以使用LiteLoader的LLOneBot插件已经测试过了并且可用
+
 ## Kook消息处理器
 
 Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
@@ -290,57 +292,9 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 # 注
 
-!> 如果你需要使用frp将ws服务器映射到公网请使用http协议并设置accesstoken
-
-!> 如果你想在一个端口上同时使用http和websocket并配置ssl可以参考以下nginx的配置文件
-
-!> 强烈建议将HTTP和Websocket配置TLS加密, 如果不加密你的任何数据(聊天信息敏感信息)就像在裸奔
-
 !> 如果你使用了本插件并且控制台输出卡在`正在获取群信息...`那么说明你的机器人进入群的时间太短过几天再试试
 
-<details>
-<summary>点击展开配置文件</summary>
-
-```conf
-server {
-    listen 443 ssl;
-    server_name bot.example.com;
-
-    ssl_certificate cert.pem;
-    ssl_certificate_key key.pem;
-
-    # HTTP
-    location / {
-        proxy_pass http://localhost:8083/;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    # Websocket
-    location /ws {
-        proxy_pass http://localhost:8081/;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-
-    # Additional SSL settings for security
-    ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_prefer_server_ciphers on;
-    ssl_ciphers ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
-    ssl_session_cache shared:SSL:10m;
-    ssl_session_timeout 10m;
-    ssl_session_tickets off;
-}
-
-```
-
-</details>
+!> 因为QQ官方机器人API限制了主动发送消息次数(每个月限制4条消息)，所以暂时不支持QQ官方机器人API消息处理器
 
 # 购买
 
