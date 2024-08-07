@@ -25,14 +25,14 @@
 
 # 多语言支持
 
-!> ChatConnector支持多语言，例如`简体中文` `英语` 分别对应了`zh_cn` `en_us` 
+!> ChatConnector支持多语言，例如`简体中文` `英语` 分别对应了`zh_cn` `en_us`
 你可以在游戏内或者QQ群/Kook/Discord频道内分别使用 `/chatc lang zh_cn`(游戏指令) `!!lang zh_cn`(群指令) 来切换语言
 
 # 展示
 
 <div style="display: flex;">
-    <img src="../images/chatc-chat-show.png" alt="Image 1" style="width: 50%; height: auto;">
-    <img src="../images/chatc-qq-chat-show.png" alt="Image 2" style="width: 50%; height: auto;">
+    <img src="../images/chatc/chat-show.png" alt="Image 1" style="width: 50%; height: auto;">
+    <img src="../images/chatc/qq-chat-show.png" alt="Image 2" style="width: 50%; height: auto;">
 </div>
 
 ![bStats](https://bstats.org/signatures/velocity/ChatConnector.svg)
@@ -115,7 +115,7 @@
 Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 
 > 如何才能找到你的聊天频道的ID呢? 答: 下面这张图箭头指向的就是你的频道ID位于最后一个斜杠后, 双击复制即可
-![channel_id](../images/chatc-kook-channel.png)
+![channel_id](../images/chatc/kook-channel.png)
 
 打开`config.json`将复制下来的id填入`groupId`内
 
@@ -206,7 +206,7 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
     "!!",
     "！！"
   ],
-  "messageParseHandler": "Array"
+  "removeUnicodeChars": true
 }
 ```
 
@@ -254,13 +254,18 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > 如果列表中添加了`#`作为命令前缀那么可以使用 `#list`来执行所有命令, 你也可以添加一行 `""`来取消掉
 > 命令前缀
 
-> messageParseHandler是处理消息的解析器类型, 填入 `Array` 表示使用数组的形式解析文本, 这个解析器不太稳定,
-> 可能会有一些bug, 但是积极维护更新, 也可以选择 `CQ`表示使用CQ码来解析, ~~当然这个解析器也不稳定~~,
-> CQ解析器只会有维护性更新。 填错或者不填默认为 `CQ`
+> removeUnicodeChars表示是否移除单个单元的Unicode字符 默认为开启, 如果开启消息则会更简洁,
+> 但是无法正常显示Emoji表情, QQ小黄脸表情正常显示(见左图)。如果关闭此功能的效果见右图
+
+<div style="display: flex;">
+    <img src="../images/chatc/remove-chars.png" alt="Image 1" style="width: 50%; height: auto;">
+    <img src="../images/chatc/no-remove-chars.png" alt="Image 2" style="width: 50%; height: auto;">
+</div>
 
 ## 群命令别名
 
 下面是`aliases.yml`的默认值
+
 ```yaml
 wh:
   - whitelist
