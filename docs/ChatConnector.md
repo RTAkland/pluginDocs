@@ -21,13 +21,6 @@
 如果你需要任何帮助你可以加入ChatConnector交流群(575300987), 有任何问题都可以在这里面问, 前提是你读完并且了解了本文档。
 我会在这个群内测试我的插件
 
-!> 本插件支持多群组监听转发
-
-# 多语言支持
-
-!> ChatConnector支持多语言，例如`简体中文` `英语` 分别对应了`zh_cn` `en_us`
-你可以在游戏内或者QQ群/Kook/Discord频道内分别使用 `/chatc lang zh_cn`(游戏指令) `!!lang zh_cn`(群指令) 来切换语言
-
 # 展示
 
 <div style="display: flex;">
@@ -45,8 +38,6 @@
 下载最新的Lagrange并配置正向Websocket和正向HTTP 也可以按需配置AccessToken
 下载最新的jar文件放入你的Velocity插件文件夹内  
 然后~~原神, 启动!~~
-
-> 因为使用的是OneBotV11规范所以理论上大部分OneBotV11实现都可以使用此插件
 
 ### 配置OneBotV11实现
 
@@ -108,8 +99,10 @@
 > Websocket的连接会在初始化插件的时候自动进行连接, 不需要手动连接
 > 当非正常关闭链接的时候会自动重连
 
-> 本插件解析数组形式的消息但是LLOneBot并未提供数组类型的消息,所以不能使用LLOneBot插件, 请使用Lagrange
-> 或其他提供了数组消息的OneBotV11实现
+> 因为使用的是OneBotV11规范所以理论上大部分OneBotV11实现都可以使用此插件, 已经测试过的OneBot实现有
+
+- LLOneBot(LiteLoader)
+- Lagrange.OneBot
 
 ## Kook消息处理器
 
@@ -263,6 +256,11 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
     <img src="../images/chatc/no-remove-chars.png" alt="Image 2" style="width: 50%; height: auto;">
 </div>
 
+# 多语言支持
+
+!> ChatConnector支持多语言，例如`简体中文` `英语` 分别对应了`zh_cn` `en_us`
+你可以在游戏内或者QQ群/Kook/Discord频道内分别使用 `/chatc lang zh_cn`(游戏指令) `!!lang zh_cn`(群指令) 来切换语言
+
 # 命令
 
 ## 游戏内命令
@@ -312,6 +310,8 @@ check-update:
 !> 如果你使用了本插件并且控制台输出卡在`正在获取群信息...`那么说明你的机器人进入群的时间太短过几天再试试
 
 !> 因为QQ官方机器人API限制了主动发送消息次数(每个月限制4条消息)，所以暂时不支持QQ官方机器人API消息处理器
+
+!> 本插件支持多群组互通即: 多对一 (两个以上QQ群转发MC内的消息, MC的消息转发到所有QQ群), 但是不支持不同平台的消息监听
 
 # 购买
 
