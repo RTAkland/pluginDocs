@@ -99,10 +99,16 @@
 > Websocket的连接会在初始化插件的时候自动进行连接, 不需要手动连接
 > 当非正常关闭链接的时候会自动重连
 
+<<<<<<< HEAD
 > 因为使用的是OneBotV11规范所以理论上大部分OneBotV11实现都可以使用此插件, 已经测试过的OneBot实现有
 
 - LLOneBot(LiteLoader)
 - Lagrange.OneBot
+  =======
+
+> 本插件解析数组形式的消息但是LLOneBot并未提供数组类型的消息,所以不能使用LLOneBot插件, 请使用Lagrange
+> 或其他提供了数组消息的OneBotV11实现
+>> > > > > > d8eff032a206e90354311a6ca373f3031751ca5f
 
 ## Kook消息处理器
 
