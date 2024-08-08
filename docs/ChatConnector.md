@@ -108,7 +108,8 @@
 > Websocket的连接会在初始化插件的时候自动进行连接, 不需要手动连接
 > 当非正常关闭链接的时候会自动重连
 
-> 当然你也可以使用LiteLoader的LLOneBot插件已经测试过了并且可用
+> 本插件解析数组形式的消息但是LLOneBot并未提供数组类型的消息,所以不能使用LLOneBot插件, 请使用Lagrange
+> 或其他提供了数组消息的OneBotV11实现
 
 ## Kook消息处理器
 
@@ -262,23 +263,6 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
     <img src="../images/chatc/no-remove-chars.png" alt="Image 2" style="width: 50%; height: auto;">
 </div>
 
-## 群命令别名
-
-下面是`aliases.yml`的默认值
-
-```yaml
-wh:
-  - whitelist
-  - 白名单
-check-update:
-  - cu
-  - 检查更新
-```
-
-> 键值是原本的命令, 所有原本的命令可以用 `!!help` 来显示出来, 支持添加
-> 多个别名, 支持中文, 但是更改之后无法使用 `/chatc reload` 来重新加载,
-> 你必须重新启动velocity才能应用这些别名更改
-
 # 命令
 
 ## 游戏内命令
@@ -305,6 +289,23 @@ check-update:
 > `!!wh` 可以关闭(off)/开启(on)/添加(add)/删除(remove)白名单  
 > `!!list` 查看所有子服在线的玩家列表  
 > `!!check-update` 检查插件是否有新版本
+
+### 群命令别名
+
+下面是`aliases.yml`的默认值
+
+```yaml
+wh:
+  - whitelist
+  - 白名单
+check-update:
+  - cu
+  - 检查更新
+```
+
+> 键值是原本的命令, 所有原本的命令可以用 `!!help` 来显示出来, 支持添加
+> 多个别名, 支持中文, 但是更改之后无法使用 `/chatc reload` 来重新加载,
+> 你必须重新启动velocity才能应用这些别名更改
 
 # 注
 
