@@ -276,7 +276,6 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > `/chatc reload` 重载配置文件(需要在控制台执行)  
 > `/chatc reconnect` 重新连接Websocket服务器  
 > `/chatc disconnect` 断开Websocket的连接(需要在控制台执行)  
-> `/chatc reload ws` 重新连接Websocket(在更改了配置文件的情况下重连需要使用此命令)(需要在控制台执行)  
 > `/chatc lang <lang>` 来切换语言, 支持的语言列表见 [多语言支持](#多语言支持)(需要在控制台执行)  
 > `/chatc check-update` 检查插件是否有新版本  
 > `/chatc help` 列出所有子命令(需要在控制台执行)
