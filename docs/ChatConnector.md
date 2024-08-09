@@ -99,16 +99,10 @@
 > Websocket的连接会在初始化插件的时候自动进行连接, 不需要手动连接
 > 当非正常关闭链接的时候会自动重连
 
-<<<<<<< HEAD
-> 因为使用的是OneBotV11规范所以理论上大部分OneBotV11实现都可以使用此插件, 已经测试过的OneBot实现有
+> 因为使用的是OneBotV11规范所以理论上大部分OneBotV11实现都可以使用此插件, 已经测试过的OneBot实现有以下OneBotV11实现:
 
 - LLOneBot(LiteLoader)
 - Lagrange.OneBot
-  =======
-
-> 本插件解析数组形式的消息但是LLOneBot并未提供数组类型的消息,所以不能使用LLOneBot插件, 请使用Lagrange
-> 或其他提供了数组消息的OneBotV11实现
->> > > > > > d8eff032a206e90354311a6ca373f3031751ca5f
 
 ## Kook消息处理器
 
@@ -227,9 +221,8 @@ Kook中暂时只支持纯文本以及部分emoji表情的解析/收发
 > groupId是需要监听消息的QQ群号, 如果你用的是Kook或者Discord你需要将其设置为文字频道的频道号, 可以设置多个群号/频道号,
 > 只需要用数组的形式包裹住群号/频道号就行, 例如: `[114514,12346,231323112]`
 
-> events是监听的事件类型, 这里是`Event`
->
-类型 `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent` `GroupMessageEvent` `CrossServerMessageEvent`
+> events是监听的事件类型, 这里是`Event`类型
+> `PlayerJoinEvent` `PlayerLeaveEvent` `PlayerChatEvent` `InitEvent` `GroupMessageEvent` `CrossServerMessageEvent`
 > `PlayerJoinEvent`表示玩家加入的事件如果添加了这一行则表示玩家加入服务器则会向qq群发送消息  
 > `PlayerLeaveEvent`表示玩家离开服务器的事件  
 > `PlayerChatEvent`表示玩家聊天事件(这个聊天事件指的是MC里的聊天事件)  
